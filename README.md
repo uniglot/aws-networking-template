@@ -19,7 +19,11 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [aws_internet_gateway.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/internet_gateway) | resource |
+| [aws_eip.eip](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eip) | resource |
+| [aws_internet_gateway.igw](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/internet_gateway) | resource |
+| [aws_nat_gateway.nat](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/nat_gateway) | resource |
+| [aws_route.private](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route) | resource |
+| [aws_route.public](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route) | resource |
 | [aws_route_table.private](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table) | resource |
 | [aws_route_table.public](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table) | resource |
 | [aws_route_table_association.private](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table_association) | resource |
@@ -33,14 +37,11 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_pri_sub_cidrs"></a> [pri\_sub\_cidrs](#input\_pri\_sub\_cidrs) | List of CIDR blocks of private subnets. | `list(string)` | <pre>[<br>  "10.0.1.128/25"<br>]</pre> | no |
-| <a name="input_project_name"></a> [project\_name](#input\_project\_name) | n/a | `string` | `"None"` | no |
+| <a name="input_project_name"></a> [project\_name](#input\_project\_name) | n/a | `string` | n/a | yes |
 | <a name="input_pub_sub_cidrs"></a> [pub\_sub\_cidrs](#input\_pub\_sub\_cidrs) | List of CIDR blocks of public subnets. | `list(string)` | <pre>[<br>  "10.0.1.0/25"<br>]</pre> | no |
 | <a name="input_vpc_cidr"></a> [vpc\_cidr](#input\_vpc\_cidr) | The IPv4 CIDR block for the VPC. | `string` | `"10.0.1.0/24"` | no |
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| <a name="output_igw_id"></a> [igw\_id](#output\_igw\_id) | ID of the created internet gateway. |
-| <a name="output_vpc_id"></a> [vpc\_id](#output\_vpc\_id) | ID of the created VPC. |
+No outputs.
 <!-- END_TF_DOCS -->
