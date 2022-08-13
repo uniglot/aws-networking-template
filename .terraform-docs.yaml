@@ -1,0 +1,4 @@
+output:
+  file: README.md
+  mode: replace
+formatter: "markdown table"
