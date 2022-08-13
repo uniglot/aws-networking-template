@@ -1,7 +1,3 @@
-# AWS Networking Template
-
-This provisions essential network components of AWS, including a VPC, subnets, routes, an internet gateway, and a NAT gateway.
-
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
@@ -40,10 +36,10 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_pri_sub_cidrs"></a> [pri\_sub\_cidrs](#input\_pri\_sub\_cidrs) | List of CIDR blocks of private subnets. | `list(string)` | <pre>[<br>  "10.0.1.128/25"<br>]</pre> | no |
-| <a name="input_project_name"></a> [project\_name](#input\_project\_name) | n/a | `string` | n/a | yes |
-| <a name="input_pub_sub_cidrs"></a> [pub\_sub\_cidrs](#input\_pub\_sub\_cidrs) | List of CIDR blocks of public subnets. | `list(string)` | <pre>[<br>  "10.0.1.0/25"<br>]</pre> | no |
-| <a name="input_vpc_cidr"></a> [vpc\_cidr](#input\_vpc\_cidr) | The IPv4 CIDR block for the VPC. | `string` | `"10.0.1.0/24"` | no |
+| <a name="input_pri_sub_cidrs"></a> [pri\_sub\_cidrs](#input\_pri\_sub\_cidrs) | List of CIDR blocks of private subnets. | `list(string)` | `[]` | no |
+| <a name="input_project_name"></a> [project\_name](#input\_project\_name) | Project name that will be used as a name prefix of all resources. | `string` | n/a | yes |
+| <a name="input_pub_sub_cidrs"></a> [pub\_sub\_cidrs](#input\_pub\_sub\_cidrs) | List of CIDR blocks of public subnets. | `list(string)` | `[]` | no |
+| <a name="input_vpc_cidr"></a> [vpc\_cidr](#input\_vpc\_cidr) | The IPv4 CIDR block for the VPC. | `string` | n/a | yes |
 
 ## Outputs
 

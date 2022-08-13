@@ -1,5 +1,6 @@
 variable "project_name" {
-  type = string
+  description = "Project name that will be used as a name prefix of all resources."
+  type        = string
 }
 
 variable "vpc_cidr" {
