@@ -1,4 +1,5 @@
 resource "aws_eip" "eip" {
+  count = length(var.pri_sub_cidrs) == 0 ? 0 : 1
   vpc = true
   tags = {
     Name = "${var.project_name}-nat"
@@ -7,7 +8,7 @@ resource "aws_eip" "eip" {
 
 resource "aws_nat_gateway" "nat" {
   count = length(var.pri_sub_cidrs) == 0 ? 0 : 1
-  allocation_id = aws_eip.eip.id
+  allocation_id = aws_eip.eip[0].id
   subnet_id     = aws_subnet.public[0].id
   tags = {
     Name = "${var.project_name}-nat"
