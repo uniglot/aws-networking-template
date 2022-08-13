@@ -1,3 +1,7 @@
+# AWS Networking Template
+
+This provisions essential network components of AWS, including a VPC, subnets, routes, an internet gateway, and a NAT gateway.
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 

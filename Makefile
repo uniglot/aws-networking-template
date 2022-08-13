@@ -4,3 +4,6 @@ tidy:
 
 test:
 	terraform plan --var-file=test.tfvars
+
+applytest:
+	terraform apply -auto-approve --var-file=test.tfvars

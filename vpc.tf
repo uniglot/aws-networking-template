@@ -19,6 +19,6 @@ resource "aws_subnet" "private" {
   vpc_id     = aws_vpc.this.id
   cidr_block = var.pri_sub_cidrs[count.index]
   tags = {
-    Name = "${var.project_name}-pub-sub-${count.index}"
+    Name = "${var.project_name}-pri-sub-${count.index}"
   }
 }
