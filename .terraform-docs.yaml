@@ -2,3 +2,22 @@ output:
   file: README.md
   mode: replace
 formatter: "markdown table"
+content: |-
+  # AWS Networking Template
+
+  This module provisions essential network components of AWS.
+
+  The resulting resources include
+  - A VPC
+  - Public subnets (arbitrary numbers)
+  - Private subnets (arbitrary numbers)
+  - Route tables
+  - An internet gateway, if needed
+  - A NAT gateway and the associated Elastic IP, if needed
+  - Security groups
+
+  {{ .Resources }}
+
+  {{ .Inputs }}
+
+  {{ .Outputs }}

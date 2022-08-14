@@ -1,17 +1,16 @@
 <!-- BEGIN_TF_DOCS -->
-## Requirements
+# AWS Networking Template
 
-No requirements.
+This module provisions essential network components of AWS.
 
-## Providers
-
-| Name | Version |
-|------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
-
-## Modules
-
-No modules.
+The resulting resources include
+- A VPC
+- Public subnets (arbitrary numbers)
+- Private subnets (arbitrary numbers)
+- Route tables
+- An internet gateway, if needed
+- A NAT gateway and the associated Elastic IP, if needed
+- Security groups
 
 ## Resources
 
