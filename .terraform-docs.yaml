@@ -16,6 +16,21 @@ content: |-
   - A NAT gateway and the associated Elastic IP, if needed
   - Security groups
 
+  ## Usage Example
+
+  ```terraform
+  # in `main.tf`
+  module "network" {
+    source = "github.com/uniglot/aws-networking-template"
+
+    project_name = "module-test"
+    vpc_cidr = "10.0.1.0/24"
+    pub_sub_cidrs = ["10.0.1.0/25"]
+    pri_sub_cidrs = ["10.0.1.128/25"]
+    ssh_allowed_cidrs = ["123.123.12.3/32"]
+  }
+  ```
+
   {{ .Resources }}
 
   {{ .Inputs }}
