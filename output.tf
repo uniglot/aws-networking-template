@@ -37,3 +37,13 @@ output "pri_rt_id" {
   description = "Private route table's ID"
   value       = try(aws_route_table.private[0].id, null)
 }
+
+output "public_sec_group_id" {
+  description = "Public security group's ID"
+  value       = aws_security_group.public_access.id
+}
+
+output "private_sec_group_id" {
+  description = "Private security group's ID"
+  value       = aws_security_group.private_access.id
+}

@@ -19,3 +19,8 @@ variable "pri_sub_cidrs" {
   type        = list(string)
   default     = []
 }
+
+variable "ssh_allowed_cidrs" {
+  description = "List of CIDR blocks that are allowed for SSH"
+  type        = list(string)
+}
